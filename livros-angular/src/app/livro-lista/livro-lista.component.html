@@ -13,12 +13,14 @@
         <tbody>
             <tr *ngFor="let livro of livros">
                 <td>
-                    <li>{{ livro.titulo }}</li>
-                    <li>
-                        <button class="btn btn-danger btn-sm ms-2" (click)="excluir(livro.codigo)">
-                            Excluir
-                        </button>
-                    </li>
+                    <ul class="list-group d-flex justify-content-between">
+                        <li>{{ livro.titulo }}</li>
+                        <li>
+                            <button class="btn btn-danger btn-sm ms-2" (click)="excluir(livro.codigo)">
+                                Excluir
+                            </button>
+                        </li>
+                    </ul>
                 </td>
                 <td>{{livro.resumo}}</td>
                 <td>{{ obterNome(livro.codEditora) }}</td>
